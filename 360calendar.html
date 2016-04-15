@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+<!-- 	样式部分 -->
+	<style type="text/css">
+/*按尺寸不同所做的响应式布局*/
+	@media screen and (max-width:370px){
+		html{
+			height: 100%;
+			background-image: url("img/undefined.gif");
+			background-repeat: no-repeat;
+			background-size:auto 100%; 
+			background-position: center;
+			background-attachment: fixed;
+			overflow: hidden;
+		}
+		body{
+			height: 100%;
+/*			background-image: url("img/端午.gif");*/
+			background-repeat: no-repeat;
+			background-size:auto 100%; 
+			background-position: center;
+			background-attachment: fixed;
+			overflow: hidden;
+			font-size: 10px;
+			font-family: "Microsoft Yahei"
+		}
+		table{
+			width: 100%;
+		}	
+		td{
+			text-align: center;
+		}
+		#container{
+			width: 100%;
+			height: 100%;
+		}
+		#calendar{
+			width: 85%;
+			margin: 50px auto;
+			background: rgba(255,255,255,0.7);
+			border: solid 1px white;
+			border-radius: 20px;
+			padding: 10px;
+			overflow: auto;
+		}
+		#select_bar{
+			height: 10%;
+		}
+		#week_area{
+			height: 10%;
+		}
+		#day_area{
+			height: 80%;
+		}
+
+		.item{
+			width: 14.2857%;
+			height: 50px;
+			float: left;
+			text-align: center;
+/*			outline: solid 1px #999;*/
+			color: black;
+			padding: 2px 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border:solid 1px white;
+		}
+		.today{
+			background-color: rgba(0,0,0,0.3);
+		}
+		select{
+			width: 25%;
+			margin: 6px;
+			outline: none;
+			border:none;
+		}
+		option{
+			font-size: 12px;
+		}
+		h2{
+			font-size: 12px;
+		}
+		h3{
+			font-size: 4px;
+			font-weight: 100;
+		}
+	}
+	@media screen and (min-width: 370px) and (max-width:768px){
+		html{
+			height: 100%;
+			background-image: url("img/undefined.gif");
+			background-repeat: no-repeat;
+			background-size:auto 100%; 
+			background-position: center;
+			background-attachment: fixed;
+			overflow: hidden;
+		}
+		body{
+			height: 100%;
+/*			background-image: url("img/端午.gif");*/
+			background-repeat: no-repeat;
+			background-size:auto 100%; 
+			background-position: center;
+			background-attachment: fixed;
+			overflow: hidden;
+			font-size: 14px;
+			font-family: "Microsoft Yahei"
+			margin:0 auto;
+		}
+		table{
+			width: 100%;
+		}	
+		td{
+			text-align: center;
+		}
+		#container{
+			width: 100%;
+			height: 100%;
+		}
+		#calendar{
+			width: 80%;
+			height: 60%;
+			margin: 75px auto;
+			background: rgba(255,255,255,0.7);
+			border: solid 1px white;
+			border-radius: 20px;
+			padding: 10px;
+			overflow: auto;
+		}
+		#select_bar{
+			height: 10%;
+		}
+		#week_area{
+			height: 10%;
+		}
+		#day_area{
+			height: 80%;
+		}
+
+		.item{
+			width: 14.2857%;
+			height: 16.66667%;
+			float: left;
+			text-align: center;
+/*			outline: solid 1px #999;*/
+			color: black;
+			padding: 5px 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border:solid 1px white;
+		}
+		.today{
+			background-color: rgba(0,0,0,0.3);
+		}
+		select{
+			width: 25%;
+			margin: 10px;
+			outline: none;
+			border:none;
+		}
+		option{
+			font-size: 14px;
+		}
+		h2{
+			font-size: 18px;
+		}
+		h3{
+			font-size: 10px;
+			font-weight: 100;
+		}
+	}
+	@media screen and (min-width:769px){
+		html{
+			height: 100%;
+			background-image: url("img/undefined.gif");
+			background-repeat: no-repeat;
+			background-size:auto 100%; 
+			background-position: center;
+			background-attachment: fixed;
+			overflow: hidden;
+		}
+		body{
+			width:100%;
+			height:100%;
+/*			background-image: url("img/端午.gif");*/
+			background-repeat: no-repeat;
+			background-size:auto 100%; 
+			background-position: center;
+			background-attachment: fixed;
+			overflow: hidden;
+			font-size: 14px;
+			font-family: "Microsoft Yahei"
+		}
+		table{
+			width: 100%;
+		}	
+		td{
+			text-align: center;
+		}
+		#container{
+			width: 450px;
+			margin: 0 auto;
+			height: 100%;
+		}
+		#calendar{
+			width: 70%;
+			margin: 60px auto;
+			background: rgba(255,255,255,0.7);
+			border: solid 1px white;
+			border-radius: 20px;
+			padding: 10px;
+			overflow: auto;
+		}
+		#select_bar{
+			height: 10%;
+		}
+		#week_area{
+			height: 10%;
+		}
+		#day_area{
+			height: 80%;
+		}
+
+		.item{
+			width: 14.2857%;
+			height: 60px;
+			float: left;
+			text-align: center;
+/*			outline: solid 1px #999;*/
+			color: black;
+			padding: 2px 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border:solid 1px white;
+		}
+		.today{
+			background-color: rgba(0,0,0,0.3);
+		}
+		select{
+			width: 25%;
+			margin: 10px;
+			outline: none;
+			border:none;
+		}
+		option{
+			font-size: 12px;
+		}
+		h2{
+			font-size: 16px;
+		}
+		h3{
+			font-size: 10px;
+			font-weight: 100;
+		}
+	}
+
+	</style>
+</head>
+<body>
+<!-- HTML部分 -->
+	<div id="container">
+		<div id="calendar">
+			<div id="select_bar">
+				<select id="select_year" onchange="select(this)">
+				</select>
+				<select id="select_month" onchange="select(this)">
+				</select>
+			</div>
+			<div id="week_area">
+				<table>
+					<tr>
+						<td>日</td>
+						<td>一</td>
+						<td>二</td>
+						<td>三</td>
+						<td>四</td>
+						<td>五</td>
+						<td>六</td>
+					</tr>
+				</table>
+			</div>
+			<div id="day_area">
+			
+			</div>
+	
+		</div>
+	</div>
+<!-- js部分 -->
+	<script type="text/javascript">
+
+
+		//按具体日期的国际节日数据--[月,日,节日]
+		var dateFtv= new Array(
+				[1,1,"元旦节"],[2,14,"情人节"],[3,8,"妇女节"],[4,1,"愚人节"],[5,1,"劳动节"],[6,1,"儿童节"],[9,10,"教师节"],[10,1,"国庆节"],[10,31,"万圣节"],[12,24,"平安夜"],[12,25,"圣诞节"]
+			);
+		//按哪月第几个星期几计算的国际节日数据--[月,第几个,周几,节日]
+		var weekFtv= new Array(
+				[5,2,0,"母亲节"],[6,3,0,"父亲节"],[11,4,4,"感恩节"]
+			);
+		//每个节气相对于小寒的小时数
+		var jieQiData= new Array(0,21208,42467,63836,85337,107014,128867,150921,173149,195551,218072,240693,263343,285989,308563,331033,353350,375494,397447,419210,440795,462224,483532,504758);
+		//节气的名称
+		var jieQiName = new Array("小寒","大寒","立春","雨水","惊蛰","春分","清明","谷雨","立夏","小满","芒种","夏至","小暑","大暑","立秋","处暑","白露","秋分","寒露","霜降","立冬","小雪","大雪","冬至")
+
+		//初始默认日期为今天
+		var today=new Date; 
+		var year=parseInt(today.getFullYear());
+		var month=parseInt(today.getMonth())+1;
+		var date=parseInt(today.getDate());
+
+		selection(50);
+
+		function selection(number){
+			for(var i=-number; i<number;i++){
+				var t_year=year+i;
+				document.getElementById("select_year").innerHTML+="<option value='"+t_year+"'>"+t_year+"</option>";
+			}
+			for(var i=1;i<13;i++){
+				document.getElementById("select_month").innerHTML+="<option value='"+i+"'>"+i+"</option>";
+			}
+			// console.log(year);
+			// console.log(month);
+			document.getElementById("select_year").selectedIndex = number;
+
+			document.getElementById("select_month").selectedIndex = month-1;
+			addday(year,month);
+	
+		}
+		//当select变化时
+		function select(element){
+			if(element.id == "select_year"){
+				year = element.value;	
+				// console.log(element.value);
+			}
+			if(element.id == "select_month"){
+				month = element.value;
+				// console.log(element.value);
+			}
+			document.getElementById("day_area").innerHTML="";
+			addday(year,month);
+		}
+
+		//判断当前月份的天数
+		function howManyDays(year,month){
+			if (month==1||month==3||month==5||month==7||month==8||month==10||month==12) {
+				return 31;
+			}
+			if(month==2){
+				if (((year%4==0)&&(year%100!=0))||(year%400==0)) {
+					return 29;
+				}else{
+					return 28;
+				}
+
+			}else{
+				return 30;
+			}
+		}
+
+		//判断当前日期是否为节气，有则返回节气名
+		function jieqi(year,month,date) {
+   			var date1 = new Date( ( 31556925974.7*(year-1900) + jieQiData[2*month]*60000  ) + Date.UTC(1900,0,6,2,5) );
+			var jieqidate1=	date1.getUTCDate();
+			var date2 = new Date( ( 31556925974.7*(year-1900) + jieQiData[2*month+1]*60000  ) + Date.UTC(1900,0,6,2,5) );
+			var jieqidate2=	date2.getUTCDate();
+			if(date==jieqidate1){
+				return jieQiName[2*month];
+			}
+			if (date==jieqidate2) {
+				return jieQiName[2*month+1];
+			}
+		}
+		//判断当前日期是否为日期固定的节日，是则返回节日名
+		function isDateFtv(month,date){
+			for (var j= 0;j<dateFtv.length; j++) {
+				if(month==dateFtv[j][0]&&date==dateFtv[j][1]){
+					return dateFtv[j][2];
+				}
+			}
+		}
+		//判断当前日期是否为几月第几个周几的节日，是则返回节日名
+		function isWeekFtv(month,date,day){
+			var count=parseInt(((date-1)/7)+1);
+			for(var j= 0;j<weekFtv.length;j++){
+				if((month==weekFtv[j][0])&&(count==weekFtv[j][1])&&(day==weekFtv[j][2])){
+					return weekFtv[j][3];
+				}
+			}
+		}
+
+		//往日历中添加单个日期
+		function addday(year,month){
+			var day1= new Date();
+			//日期中月份从0-11
+			day1.setFullYear(year,month-1,1);
+			var before= parseInt(day1.getDay());
+			// console.log(before);
+			var totalDay= parseInt(howManyDays(year,month));
+			// console.log(totalDay);
+			//定义今天的年月日
+			var today_year=parseInt(today.getFullYear());
+			var today_month=parseInt(today.getMonth())+1;
+			var today_date=parseInt(today.getDate());
+			//判断当前季节不同季节字体颜色不同
+			var season;
+			if(month==2||month==3||month==4){
+					season="rgba(46,204,113,1)"
+			}
+			if(month==5||month==6||month==7){
+					season="rgba(52,152,219,1)"
+			}
+			if(month==8||month==9||month==10){
+					season="rgba(253,170,51,1)"
+			}
+			if(month==11||month==12||month==1){
+					season="rgba(45,69,95,1)"
+			}
+			//一号前空白的方格
+			for(var i=0;i<before;i++){
+				document.getElementById("day_area").innerHTML += "<div class='item'></div>";
+			}
+
+			for (var i=1;i<=totalDay; i++){
+				//算出当天是周几
+				var current_day=new Date;
+				current_day.setFullYear(year,month-1,i);
+				var day=parseInt(current_day.getDay());
+				// console.log(day);
+				//新建一个当前天div元素
+				item = document.createElement("div");
+
+				//如果当前天是今天，设置它与别人不同的样式
+				if(year==today_year&&month==today_month&&i==today_date){
+					item.className="item today";
+					item.style.background=season;
+					document.body.style.backgroundImage="url('img/"+jieqi(today_year,today_month-1,today_date)+".gif')"
+				}else{
+					item.className="item";	
+				}
+				//在日期区域加上当前天
+				document.getElementById("day_area").appendChild(item);
+				//写入当前天日期
+				item.innerHTML += "<h2>"+i+"<h2>";
+				//写入节气和节日
+				if(jieqi(year,month-1,i)){
+					item.innerHTML +="<h3 name='"+jieqi(year,month-1,i)+"' style='color:"+season+"'>"+jieqi(year,month-1,i)+"</h3>";
+				}
+				if(isDateFtv(month,i)){
+					item.innerHTML +="<h3 style='color:"+season+"'>"+isDateFtv(month,i)+"</h3>";
+				}
+				if(isWeekFtv(month,i,day)!=null){
+					item.innerHTML +="<h3 style='color:"+season+"'>"+isWeekFtv(month,i,day)+"</h3>";
+					// console.log(month+"月"+i+"日"+"星期"+day);
+				}
+				//当鼠标在当前日期方块上是给它的边框换一个颜色，
+				item.onmouseover= function (year,month,i){
+					this.style.borderColor=season;
+					//当前日期是否为节日或节气，是则将body的背景换成节日或节气的图片
+					var child=this.getElementsByTagName("h3");
+					for(i=0;i<child.length;i++){
+						if(child[i].innerHTML){
+							document.body.style.backgroundImage="url('img/"+child[i].innerHTML+".gif')"
+						}
+
+					}console.log(child);
+
+				}
+				//鼠标离开时清空以上样式
+				item.onmouseout= function(){
+					this.style.border="";
+					document.body.style.backgroundImage="";
+				}
+
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>
