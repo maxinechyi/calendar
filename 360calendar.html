@@ -8,90 +8,8 @@
 <!-- 	样式部分 -->
 	<style type="text/css">
 /*按尺寸不同所做的响应式布局*/
-	@media screen and (max-width:370px){
-		html{
-			height: 100%;
-			background-image: url("img/undefined.gif");
-			background-repeat: no-repeat;
-			background-size:auto 100%; 
-			background-position: center;
-			background-attachment: fixed;
-			overflow: hidden;
-		}
-		body{
-			height: 100%;
-/*			background-image: url("img/端午.gif");*/
-			background-repeat: no-repeat;
-			background-size:auto 100%; 
-			background-position: center;
-			background-attachment: fixed;
-			overflow: hidden;
-			font-size: 10px;
-			font-family: "Microsoft Yahei"
-		}
-		table{
-			width: 100%;
-		}	
-		td{
-			text-align: center;
-		}
-		#container{
-			width: 100%;
-			height: 100%;
-		}
-		#calendar{
-			width: 85%;
-			margin: 50px auto;
-			background: rgba(255,255,255,0.7);
-			border: solid 1px white;
-			border-radius: 20px;
-			padding: 10px;
-			overflow: auto;
-		}
-		#select_bar{
-			height: 10%;
-		}
-		#week_area{
-			height: 10%;
-		}
-		#day_area{
-			height: 80%;
-		}
 
-		.item{
-			width: 14.2857%;
-			height: 50px;
-			float: left;
-			text-align: center;
-/*			outline: solid 1px #999;*/
-			color: black;
-			padding: 2px 0;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-			border:solid 1px white;
-		}
-		.today{
-			background-color: rgba(0,0,0,0.3);
-		}
-		select{
-			width: 25%;
-			margin: 6px;
-			outline: none;
-			border:none;
-		}
-		option{
-			font-size: 12px;
-		}
-		h2{
-			font-size: 12px;
-		}
-		h3{
-			font-size: 4px;
-			font-weight: 100;
-		}
-	}
-	@media screen and (min-width: 370px) and (max-width:768px){
+	@media screen and (max-width:769px){
 		html{
 			height: 100%;
 			background-image: url("img/undefined.gif");
@@ -100,6 +18,7 @@
 			background-position: center;
 			background-attachment: fixed;
 			overflow: hidden;
+			font-size: 60%;
 		}
 		body{
 			height: 100%;
@@ -121,12 +40,10 @@
 		}
 		#container{
 			width: 100%;
-			height: 100%;
 		}
 		#calendar{
 			width: 80%;
-			height: 60%;
-			margin: 75px auto;
+			margin: 2.5rem auto;
 			background: rgba(255,255,255,0.7);
 			border: solid 1px white;
 			border-radius: 20px;
@@ -145,7 +62,7 @@
 
 		.item{
 			width: 14.2857%;
-			height: 16.66667%;
+			height:5rem;
 			float: left;
 			text-align: center;
 /*			outline: solid 1px #999;*/
@@ -166,36 +83,37 @@
 			border:none;
 		}
 		option{
-			font-size: 14px;
+			font-size: 0.5rem;
 		}
 		h2{
-			font-size: 18px;
+			font-size: 0.8rem;
+			margin-bottom: 0.1rem;
 		}
 		h3{
-			font-size: 10px;
+			font-size:0.1rem;
 			font-weight: 100;
 		}
 	}
-	@media screen and (min-width:769px){
+	@media screen and (min-width:770px){
 		html{
 			height: 100%;
 			background-image: url("img/undefined.gif");
 			background-repeat: no-repeat;
-			background-size:auto 100%; 
-			background-position: center;
+			background-size:450px 700px; 
+/*			background-position: center;*/
 			background-attachment: fixed;
 			overflow: hidden;
 		}
 		body{
-			width:100%;
-			height:100%;
+			width:450px;
+			height: 100%;
+			/*margin:0 15px;*/
 /*			background-image: url("img/端午.gif");*/
 			background-repeat: no-repeat;
-			background-size:auto 100%; 
-			background-position: center;
+			background-size:450px 700px; 
+/*			background-position: center;*/
 			background-attachment: fixed;
 			overflow: hidden;
-			font-size: 14px;
 			font-family: "Microsoft Yahei"
 		}
 		table{
@@ -205,9 +123,8 @@
 			text-align: center;
 		}
 		#container{
-			width: 450px;
+			width:100%;
 			margin: 0 auto;
-			height: 100%;
 		}
 		#calendar{
 			width: 70%;
@@ -251,10 +168,11 @@
 			border:none;
 		}
 		option{
-			font-size: 12px;
+			font-size: 7px;
 		}
 		h2{
 			font-size: 16px;
+			margin-bottom:5px; 
 		}
 		h3{
 			font-size: 10px;
